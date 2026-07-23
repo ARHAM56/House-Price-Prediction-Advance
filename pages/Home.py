@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 import streamlit as st
 
 # -----------------------------
@@ -50,9 +51,9 @@ with left:
 with right:
 
     st.image(
-        "assets/logo.png",
-        use_container_width=True
-    )
+    "assets/Home.png",
+    use_container_width=True
+)
 
 st.divider()
 

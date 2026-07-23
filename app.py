@@ -33,7 +33,7 @@ st.write("Predict house prices using a Machine Learning model.")
 # ----------------------------
 # Sidebar Inputs
 # ----------------------------
-st.sidebar.image("assets/logo.png")
+st.sidebar.image("assets/Home.png", use_container_width=True)
 st.sidebar.header("Enter House Details")
 
 longitude = st.sidebar.slider("Longitude", -124.5, -114.0, -122.0)

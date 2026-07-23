@@ -1,83 +1,170 @@
-# 🏠 California House Price Prediction
+# 🏠 AI House Price Prediction Dashboard
 
-A Machine Learning web application built with **Python, Scikit-learn, and Streamlit** to predict California house prices based on housing features.
-
----
-
-## 📸 Demo
-
-![App Screenshot](assets/logo.png)
+An end-to-end **Machine Learning** web application built using **Python, Scikit-learn, Streamlit, and Plotly** to predict California house prices with an interactive analytics dashboard.
 
 ---
 
-## 🚀 Features
+# 📸 Dashboard Preview
 
-- 🏠 Predict California house prices
-- 🤖 Random Forest Regression model
-- 📊 Data preprocessing using Scikit-learn Pipeline
-- 🎨 Interactive Streamlit UI
-- 📈 Clean project structure
-- ⚡ Fast predictions
-- 🧩 Modular code (Train, Predict, UI separated)
+> Replace the images below after taking screenshots of your application.
+
+| Home | Prediction |
+|------|------------|
+| ![](assets/home.png) | ![](assets/prediction.png) |
+
+| Analytics | Model Comparison |
+|------------|------------------|
+| ![](assets/analytics.png) | ![](assets/model.png) |
 
 ---
 
-## 🛠 Tech Stack
+# 🚀 Features
+
+## 🤖 AI Prediction
+
+- Predict California House Prices
+- Random Forest Regression Model
+- Real-time Predictions
+- Confidence-based Results
+
+## 📊 Interactive Dashboard
+
+- Modern Streamlit UI
+- Interactive Plotly Charts
+- Analytics Dashboard
+- Responsive Layout
+
+## 📈 Data Analytics
+
+- House Price Distribution
+- Income Analysis
+- Population Analysis
+- Feature Correlation
+- Data Visualization
+
+## 🏆 Model Comparison
+
+Compare multiple Machine Learning algorithms:
+
+- ✅ Linear Regression
+- ✅ Decision Tree Regressor
+- ✅ Random Forest Regressor
+
+Performance Metrics:
+
+- RMSE
+- MAE
+- R² Score
+
+## 📄 Reports
+
+- Prediction History
+- CSV Export
+- PDF Report Generation
+
+---
+
+# 🛠️ Technology Stack
+
+### Programming
 
 - Python
-- Streamlit
+
+### Machine Learning
+
 - Scikit-learn
+- Random Forest
+- Decision Tree
+- Linear Regression
+
+### Data Processing
+
 - Pandas
 - NumPy
-- Joblib
+
+### Visualization
+
 - Plotly
+- Matplotlib
+
+### Frontend
+
+- Streamlit
+
+### Model Storage
+
+- Joblib
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
+```text
 House-Price-Prediction/
 │
-├── app.py                 # Streamlit frontend
-├── train.py               # Train ML model
-├── predict.py             # Prediction logic
+├── app.py                    # Main Streamlit Application
+├── train.py                  # Model Training
+├── predict.py                # Prediction Logic
 ├── requirements.txt
 ├── README.md
 │
-├── data/
-│   ├── housing.csv
-│   ├── input.csv
-│   └── output.csv
+├── pages/
+│   ├── 1_🏠_Home.py
+│   ├── 2_🤖_Prediction.py
+│   ├── 3_📊_Analytics.py
+│   ├── 4_📈_Model_Comparison.py
+│   └── 5_ℹ️_About.py
+│
+├── utils/
+│   ├── charts.py
+│   ├── pdf_generator.py
+│   ├── history.py
+│   └── styles.py
 │
 ├── models/
 │   ├── model.pkl
 │   └── pipeline.pkl
 │
+├── data/
+│   ├── housing.csv
+│   ├── input.csv
+│   ├── output.csv
+│   └── prediction_history.csv
+│
 ├── assets/
 │   ├── logo.png
-│   └── style.css
+│   ├── style.css
+│   ├── home.png
+│   ├── prediction.png
+│   ├── analytics.png
+│   └── model.png
 │
-└── venv/
+└── reports/
+    ├── prediction.csv
+    └── prediction_report.pdf
 ```
 
 ---
 
 # ⚙️ Installation
 
-## 1. Clone the Repository
+## 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/ARHAM56/House-Price-Prediction.git
 ```
 
-## 2. Go to the project folder
+---
+
+## 2️⃣ Open Project
 
 ```bash
 cd House-Price-Prediction
 ```
 
-## 3. Create Virtual Environment
+---
+
+## 3️⃣ Create Virtual Environment
 
 ### Windows
 
@@ -85,13 +172,13 @@ cd House-Price-Prediction
 python -m venv venv
 ```
 
-Activate it
+Activate
 
 ```bash
 venv\Scripts\activate
 ```
 
-### macOS/Linux
+### Linux / macOS
 
 ```bash
 python3 -m venv venv
@@ -100,7 +187,7 @@ source venv/bin/activate
 
 ---
 
-## 4. Install Dependencies
+## 4️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -108,123 +195,256 @@ pip install -r requirements.txt
 
 ---
 
-## 5. Train the Model
+## 5️⃣ Train the Machine Learning Model
 
 ```bash
 python train.py
 ```
 
-This creates:
+This generates:
 
 - model.pkl
 - pipeline.pkl
 
+inside the **models/** directory.
+
 ---
 
-## 6. Run the Streamlit App
+## 6️⃣ Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open automatically in your browser.
+Open your browser and visit
+
+```
+http://localhost:8501
+```
 
 ---
 
-# 📊 Input Features
+# 🏠 Input Features
 
-- Longitude
-- Latitude
-- Housing Median Age
-- Total Rooms
-- Total Bedrooms
-- Population
-- Households
-- Median Income
-- Ocean Proximity
+The prediction model uses the following features:
 
----
-
-# 🧠 Machine Learning Model
-
-Algorithm Used:
-
-- Random Forest Regressor
-
-Preprocessing:
-
-- Missing Value Imputation
-- Standard Scaling
-- One-Hot Encoding
-- Scikit-learn Pipeline
+| Feature | Description |
+|----------|-------------|
+| Longitude | Geographic Longitude |
+| Latitude | Geographic Latitude |
+| Housing Median Age | Average Age of Houses |
+| Total Rooms | Number of Rooms |
+| Total Bedrooms | Number of Bedrooms |
+| Population | Area Population |
+| Households | Number of Households |
+| Median Income | Median Household Income |
+| Ocean Proximity | Location Category |
 
 ---
 
-# 📦 Requirements
+# 🤖 Machine Learning Pipeline
+
+```
+California Housing Dataset
+            │
+            ▼
+Data Cleaning
+            │
+            ▼
+Missing Value Imputation
+            │
+            ▼
+Feature Scaling
+            │
+            ▼
+One-Hot Encoding
+            │
+            ▼
+Train-Test Split
+            │
+            ▼
+Random Forest Training
+            │
+            ▼
+Model Evaluation
+            │
+            ▼
+Prediction
+            │
+            ▼
+Interactive Dashboard
+```
+
+---
+
+# 📈 Dashboard Pages
+
+## 🏠 Home
+
+- Project Overview
+- KPI Cards
+- Dataset Summary
+- Technology Stack
+
+---
+
+## 🤖 Prediction
+
+- House Price Prediction
+- Interactive Form
+- AI Prediction Card
+- CSV Export
+
+---
+
+## 📊 Analytics
+
+- Price Distribution
+- Income Distribution
+- Correlation Matrix
+- Interactive Charts
+
+---
+
+## 📈 Model Comparison
+
+Compare
+
+- Linear Regression
+- Decision Tree
+- Random Forest
+
+Evaluation Metrics
+
+- RMSE
+- MAE
+- R² Score
+
+---
+
+## ℹ️ About
+
+- Project Details
+- Developer Information
+- Technologies Used
+- Future Improvements
+
+---
+
+# 📦 Python Libraries
 
 ```
 streamlit
 pandas
 numpy
 scikit-learn
-joblib
 plotly
 matplotlib
+joblib
 ```
 
 ---
 
 # 📸 Screenshots
 
-Add screenshots here after uploading images.
+## 🏠 Home
 
-
-### Home Page
-
-![Home](assets/logo.png)
-
-### Example
-
-![Chat](assets/log.png)
-
-Example:
-
-```
-assets/home.png
-assets/predict.png
-```
+![Home Dashboard](assets/app.png)
+![Home Dashboard](assets/Home.png)
 
 ---
 
-# 📈 Future Improvements
+## 🤖 Prediction
 
-- Deep Learning Model
+![Prediction Page](assets/Prediction.png)
+
+---
+
+## 📊 Analytics
+
+![Analytics Dashboard](assets/Analytics.png)
+![Analytics Dashboard](assets/Analytics1.png)
+![Analytics Dashboard](assets/Analytics2.png)
+![Analytics Dashboard](assets/Analytics3.png)
+![Analytics Dashboard](assets/Analytics4.png)
+![Analytics Dashboard](assets/Analytics5.png)
+![Analytics Dashboard](assets/Analytics6.png)
+
+
+
+---
+
+## 📈 Model Comparison
+
+![Model Comparison](assets/Model_Comparision5.png)
+![Model Comparison](assets/Model_Comparision.png)
+![Model Comparison](assets/Model_Comparision1.png)
+![Model Comparison](assets/Model_Comparision2.png)
+
+
+---
+
+# 🌟 Future Improvements
+
+- SHAP Explainable AI
 - XGBoost
 - LightGBM
-- Feature Importance Chart
-- Prediction History
-- Download Prediction Report
-- Deploy on Streamlit Cloud
+- CatBoost
+- Deep Learning Models
+- Prediction Confidence
+- Interactive Maps
 - User Authentication
+- Docker Support
+- REST API
+- Streamlit Cloud Deployment
+- CI/CD Pipeline
+- Database Integration
+- Real-Time Data
 
 ---
 
+# 👨‍💻 Developer
 
+## **Arham Aziz**
 
-# 👨‍💻 Author
+**B.Tech Artificial Intelligence & Machine Learning Engineering**
 
-**Arham Aziz**
+### Skills
 
-AI & Machine Learning Engineering Student
+- Python
+- Java
+- Spring Boot
+- SQL
+- Machine Learning
+- Data Analytics
+- Streamlit
 
-GitHub:
+### GitHub
+
 https://github.com/ARHAM56
 
-LinkedIn:
+### LinkedIn
+
 https://www.linkedin.com/in/arham-aziz-aa48ba41b/
 
 ---
 
-# ⭐ If you like this project
+# 📜 License
 
-Please give this repository a ⭐ on GitHub.
+This project is developed for educational and portfolio purposes.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful,
+
+⭐ **Star this repository on GitHub**
+
+It motivates me to build more AI & Machine Learning projects.
+
+---
+
+## 💙 Thank You
+
+**Made with ❤️ using Python, Streamlit, Scikit-learn, Plotly & Machine Learning**
