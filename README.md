@@ -178,6 +178,15 @@ matplotlib
 
 Add screenshots here after uploading images.
 
+
+### Home Page
+
+![Home](assets/logo.png)
+
+### Example
+
+![Chat](assets/log.png)
+
 Example:
 
 ```
@@ -200,6 +209,8 @@ assets/predict.png
 
 ---
 
+
+
 # 👨‍💻 Author
 
 **Arham Aziz**
@@ -207,10 +218,10 @@ assets/predict.png
 AI & Machine Learning Engineering Student
 
 GitHub:
-https://github.com/YOUR_USERNAME
+https://github.com/ARHAM56
 
 LinkedIn:
-https://linkedin.com/in/YOUR_LINKEDIN
+https://www.linkedin.com/in/arham-aziz-aa48ba41b/
 
 ---
 
